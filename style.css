@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body{
+    background-color: antiquewhite;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+.brand img{
+    width: 44px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container{
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+   font-family: 'Varela Round', sans-serif;
+   display: flex;
+   margin: 23px auto;
+   width: 70%;
+   border-radius: 12px;
+   padding: 34px;
+   background-image: url('bg.jpg');
+}
+
+.bottom{
+    position: sticky;
+    bottom: 0;
+    height: 130px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.icons{
+    margin-top: 14px; 
+}
+.icons i{
+    cursor: pointer;
+}
+
+#myProgressBar{
+    width: 80vw; 
+    cursor: pointer;
+}
+
+.songItemContainer{
+    margin-top: 74px;
+}
+
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.timestamp{
+    margin: 0 23px;
+}
+
+.timestamp i{
+    cursor: pointer;
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+@media only screen and (max-width: 1100px) {
+    body {
+      background-color: red;
+    }
+  }
+
+
+
+
+.popup{
+    position :fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.content{
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+}
+.content .imgBx{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    transform: translate(-5%,08%);
+    justify-content: center;
+    align-items: center;
+
+}
+.content .imgBx::before{
+    content: '';
+    width: 250px;
+    height: 250px;
+    position:absolute;
+    transform: translate(10%,-10%);
+    background: #e7ffe0;
+    border-radius: 50%;
+}
+.content .imgBx img{
+    position: relative;
+    max-width: 250px;
+    z-index: 1;
+
+}
+.content .cont{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .cont h3{
+     transform: translate(10%,0);
+     color: #333;
+     line-height: 1em;
+     font-weight: 300;
+     font-size: 2em ;
+}
+.content .cont h2{
+    font-size: 3em;
+    color: #ff4d54;
+    line-height: 1em;
+
+}
+.content .cont h2 span{
+    color: #333;
+    font-size: 0.68em;
+    text-transform: uppercase;
+}
+.content .cont h4{
+    font-size: 3em;
+    font-weight: 300;
+    color: #333;
+    line-height: 1.3em;
+    transform: translate(10%,0);
+    text-transform: uppercase;
+}
+
+.content .cont p{
+    font-weight: 300;
+}
+.content .cont a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff4d54;
+    color: #fff;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    transform: translate(30%,0);
+}
+.close{
+    position :absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    background: #f3f3f3 url(close.png);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
